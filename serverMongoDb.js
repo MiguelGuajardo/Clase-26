@@ -24,13 +24,13 @@ app.use(express.urlencoded({extended:false}))
 const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 const sessionConfig ={
     store: MongoStore.create({
-        mongoUrl: "mongodb+srv://MiguelG:UfI7qc6DpKVVGHJG@cluster0.9ejc0ij.mongodb.net/Test",
-        dbName: "Backend_Test",
+        mongoUrl: config.DATABASE.mongo.mongoUrl,
+        dbName: config.DATABASE.mongo.mongoDbName,
         mongoOptions,
         ttl: 60,
-        collectionName: 'sessions'
+        collectionName: config.DATABASE.mongo.mongoCollectionName
     }),
-    secret: `secret2584565`,
+    secret: config.DATABASE.mongo.mongoSecret,
     resave: false,
     saveUninitialized: false,
     rolling:true,
@@ -41,7 +41,7 @@ const sessionConfig ={
 app.use(session(sessionConfig))
 
 app.use(session({
-    secret: process.env.CODE_SECRET,
+    secret: config.DATABASE.mongo.mongoSecret,
     resave: false,
     saveUninitialized:false
 }))

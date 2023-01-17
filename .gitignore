@@ -2,3 +2,5 @@
 node_modules
 # Ignora los archivos relacionados a API keys
 .env
+# Ignora la carpeta en relación a las imagenes personales
+uploads

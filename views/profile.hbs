@@ -13,7 +13,11 @@
     </div>
     <div class="wrapper">
         <div class="left">
-            <img src="/src/img/descarga.png" alt="user" width="100">
+            <form action="/profile" method="post" enctype="multipart/form-data">
+                <input type="file" name="avatar" />
+                <button type="submit">Subir foto de perfil</button>
+            </form>
+            <img src={{this.avatarImageId}} alt="user" width="200">
             <h4 style="text-transform: uppercase;">{{this.firstName}} {{this.lastName}}</h4>
         </div>
         <div class="right">

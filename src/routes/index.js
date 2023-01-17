@@ -1,9 +1,14 @@
 const express = require("express")
 const router = express.Router()
 const passport = require("passport")
-const app = express()
-
+const multer  = require('multer')
+const configMemoryStorage = multer.memoryStorage()
+const upload = multer({ storage: configMemoryStorage})
+const sharp = require("sharp")
+const fs = require("fs")
 const Product = require("../models/Product")
+const INFO = require("../utils/info")
+const { fork } = require("child_process")
 
 router.get("/login",(req,res,next)=>{
     res.render("login")
@@ -42,13 +47,41 @@ router.post("/",async(req,res,next)=>{
     await newProduct.save()
     res.redirect("/")
 })
-router.get("/profile", isAuthenticated ,(req,res,next)=>{
+router.get("/profile", isAuthenticated ,(req,res)=>{
     let datos = req.user
-    const {email,firstName,lastName,alias,edad,direccion,creationDate,phone} = datos
+    const {email,firstName,lastName,alias,edad,direccion,creationDate,phone,_id} = datos
+    const avatarImageId = `uploads/${_id}.png`
     const sesionId = req.session.id
-    res.render("profile",{sesionId, email,alias,edad,direccion,creationDate,phone,firstName,lastName })
+    res.render("profile",{sesionId, email,alias,edad,direccion,creationDate,phone,firstName,lastName,avatarImageId,_id})
 })
+router.post("/profile",upload.single('avatar'),async (req,res,next)=>{
+    let datos = req.user
+    const {email,firstName,lastName,alias,edad,direccion,creationDate,phone,_id} = datos
 
+    const avatar = req.file
+
+    const proccesedAvatar = sharp(avatar.buffer)
+    const resizeAvatar = proccesedAvatar
+    const resizeAvatarBuffer = await resizeAvatar.toBuffer()
+    fs.writeFileSync(`public/uploads/${_id}.png`,resizeAvatarBuffer)
+    const avatarImageId = `uploads/${_id}.png`
+
+    res.render("profile",{email,firstName,lastName,alias,edad,direccion,creationDate,phone,avatarImageId})
+    
+})
+router.get("/info", (req,res)=>{
+    const data = INFO
+    res.render("info", {data})
+})
+router.get("/api/randoms", (req,res)=>{
+    const cant = req.query.cant || 500000000
+    const subProcess = fork("randomNumbers.js")
+
+    subProcess.send(cant)
+    subProcess.on("message",(cant)=>{
+        res.send({cant})
+    })
+})
 function isAuthenticated (req,res,next){
     if(req.isAuthenticated()){
         return next()

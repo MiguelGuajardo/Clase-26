@@ -12,12 +12,12 @@ passport.deserializeUser(async(id,done)=>{
     done(null, user)
 })
 
+
 passport.use("local-register", new LocalStrategy({
     usernameField: "email",
     passwordField: "password",
-    aliasField: "alias",
     passReqToCallback:true,
-}, async(req,email,password,done,)=>{
+}, async (req,email,password,done)=>{
     const {alias,edad,direccion,phone,firstName,lastName} = req.body
         const newUser = new User()
         newUser.email = email;
@@ -27,7 +27,7 @@ passport.use("local-register", new LocalStrategy({
         newUser.edad = edad;
         newUser.direccion = direccion;
         newUser.phone = phone;
-        newUser.creationDate = new Date().toLocaleString()
+        newUser.creationDate = new Date().toLocaleString();
         newUser.password = newUser.encryptPassword(password);
         await newUser.save()
         done(null, newUser)
