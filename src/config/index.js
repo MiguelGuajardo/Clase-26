@@ -4,7 +4,7 @@ dotenv.config()
 const config = {
     SERVER: {
         HOST:process.env.HOST,
-        PORT: process.env.PORT || 8080,
+        PORT: process.argv[2] || process.env.PORT || 8080,
     },
     DATABASE:{
         mongo: {

@@ -4,9 +4,9 @@ const session = require("express-session")
 const {config} = require("./src/config/index")
 const cookieParser = require("cookie-parser")
 const passport = require("passport")
-const auth  = require("./src/routes/index")
+const auth  = require("./src/routes/authRouter")
 const MongoStore = require("connect-mongo")
-
+const { fork } = require("child_process")
 
 const app = express()
 
@@ -55,11 +55,49 @@ app.use(express.static('./public'))
 /* Routes */
 app.use("/", auth)
 
+app.get("/randoms",(req,res)=>{
+    const cant = req.query.cant || 10000
+    const subProcess = fork("randomNumbers.js")
+    const PORT = parseInt(process.argv[2]) || 8080
+    const PROCESSID = process.pid
+    subProcess.send(cant)
+    console.log(`port: ${PORT} -> Fyh: ${Date.now()}`)
+    subProcess.on("message",(cant)=>{
+        res.render("randoms", { data: cant , PORT, PROCESSID})
+})
+})
 
 /* Server Listen */
 
 
 const server = app.listen(config.SERVER.PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${server.address().port}`);
+    console.log(`Servidor escuchando en el puerto ${config.SERVER.PORT}`);
 });
 server.on("error", (error) => console.log(`Error en servidor ${error}`));
+
+/* Clusters*/
+const parseArgs = require("minimist")
+const cluster = require("cluster")
+const INFO = require("./src/utils/info")
+const args = parseArgs(process.argv.slice(2))
+const CLUSTER = args.CLUSTER
+
+if (CLUSTER) {
+    if (cluster.isPrimary) {
+        
+        console.log(`CLUSTER corriendo en nodo primario ${process.pid} - Puerto ${config.SERVER.PORT}`);
+
+        for (let i = 0; i < 4; i++) {
+            cluster.fork()
+        }
+        cluster.on(`exit`, worker => {
+            console.log(`Worker ${worker.process.pid} finalizado.`);
+            cluster.fork();
+        });
+    } else {
+        console.log(`Nodo Worker corriendo en el proceso ${process.pid}`);
+    }
+} else {
+    console.log(`No es un cluster`);
+}
+
