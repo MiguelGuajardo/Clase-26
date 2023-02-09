@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "mongo": "nodemon serverMongoDb.js"
+    "mongo": "nodemon serverMongoDb.js",
+    "start": "node serverMongoDb.js"
   },
   "keywords": [],
   "author": "",
