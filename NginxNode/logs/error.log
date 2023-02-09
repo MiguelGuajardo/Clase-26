@@ -3,3 +3,4 @@
 {"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
 {"timestamp":"09/02/2023 10:07:21","level":"error","message":{"Message":"Incorrect password"},"data":null}
 {"timestamp":"09/02/2023 10:07:59","level":"error","message":{"Message":"Incorrect password"},"data":null}
+{"timestamp":"09/02/2023 10:08:46","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}

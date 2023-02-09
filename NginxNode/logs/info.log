@@ -87,3 +87,6 @@
 {"timestamp":"09/02/2023 10:07:08","level":"info","message":"Base de Datos mongoDB conectada","data":null}
 {"timestamp":"09/02/2023 10:07:21","level":"error","message":{"Message":"Incorrect password"},"data":null}
 {"timestamp":"09/02/2023 10:07:59","level":"error","message":{"Message":"Incorrect password"},"data":null}
+{"timestamp":"09/02/2023 10:08:41","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 10:08:42","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"09/02/2023 10:08:46","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}
