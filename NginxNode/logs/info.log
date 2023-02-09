@@ -74,3 +74,4 @@
 {"timestamp":"08/02/2023 23:17:07","level":"info","message":"Escuchando en el puerto 8080","data":null}
 {"timestamp":"08/02/2023 23:17:19","level":"info","message":"Escuchando en el puerto 8080","data":null}
 {"timestamp":"08/02/2023 23:17:27","level":"warn","message":"Ruta GET /uploads/63e446b3141d654ce5a70e1d.png no implementada","data":null}
+{"timestamp":"08/02/2023 23:18:54","level":"info","message":"Escuchando en el puerto 8080","data":null}
