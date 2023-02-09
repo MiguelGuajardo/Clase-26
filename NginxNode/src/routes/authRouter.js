@@ -10,9 +10,13 @@ router.get("/login",auth.login)
 
 router.post("/login", auth.loginPassport)
 
+router.get("/login-error",auth.login_error)
+
 router.get("/register",auth.register)
 
 router.post("/register", auth.registerPassport)
+
+router.get("/register-error", auth.register_error)
 
 router.get('/logout', auth.logOut)
 
@@ -23,10 +27,6 @@ router.post("/", auth.productPost)
 router.get("/profile", isAuthenticated , auth.profile)
 
 router.post("/profile", upload.single('avatar'), auth.profileThumbnail)
-
-router.get("/info", auth.info)
-
-router.get("/api/randoms", auth.randomNumbers)
 
 function isAuthenticated (req,res,next){
     if(req.isAuthenticated()){

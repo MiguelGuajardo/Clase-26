@@ -1,0 +1,41 @@
+{"timestamp":"07/02/2023 11:27:03","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"07/02/2023 12:00:45","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"08/02/2023 21:21:23","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:29","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:39","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:41","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:19","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:52","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:13:03","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:13:09","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:16","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:22","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:25","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:27","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:28","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:58","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:59","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:59","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:42","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:42","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:52","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:17:56","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:17:57","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:19:48","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:19:51","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:33","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:33","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:39","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:58:04","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:58:17","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:59:38","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:59:39","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:00:27","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:00:41","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:15:00","level":"warn","message":"Ruta GET /register-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:17:27","level":"warn","message":"Ruta GET /uploads/63e446b3141d654ce5a70e1d.png no implementada","data":null}

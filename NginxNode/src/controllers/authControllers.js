@@ -2,25 +2,35 @@ const passport = require("passport")
 const Product = require("../models/Product")
 const sharp = require("sharp")
 const fs = require("fs")
-const INFO = require("../utils/info")
+const info = require("../utils/info")
 const { fork } = require("child_process")
 
 const login = (req,res,next)=>{
-    res.render("login")
+    if(req.session?.user){
+        res.render("/")
+    }else{
+        res.render("login")
+    }
 }
 const loginPassport = passport.authenticate("local-login" ,{
     successRedirect:"/",
-    failureRedirect:"/login",
+    failureRedirect:"/login-error",
     passReqToCallback:true
 })
+const login_error = (req,res,next)=>{
+    res.render('login-error')
+}
 const register = (req,res,next)=>{
     res.render("register")
 }
 const registerPassport = passport.authenticate("local-register",{
     successRedirect:"/",
-    failureRedirect:"/register",
+    failureRedirect:"/register-error",
     passReqToCallback:true
 })
+const register_error = (req,res,next)=>{
+    res.render("register-error")
+}
 const logOut = (req, res, next) => {
     res.redirect('/login');
     req.session.destroy()
@@ -46,7 +56,7 @@ const profile = (req,res)=>{
     const {email,firstName,lastName,alias,edad,direccion,creationDate,phone,_id} = datos
     const avatarImageId = `uploads/${_id}.png`
     const sesionId = req.session.id
-    res.render("profile",{sesionId, email,alias,edad,direccion,creationDate,phone,firstName,lastName,avatarImageId,_id})
+    res.render("profile",{sesionId,email,alias,edad,direccion,creationDate,phone,firstName,lastName,avatarImageId,_id})
 }
 const profileThumbnail = async (req,res,next)=>{
     let datos = req.user
@@ -63,31 +73,18 @@ const profileThumbnail = async (req,res,next)=>{
     res.render("profile",{email,firstName,lastName,alias,edad,direccion,creationDate,phone,avatarImageId})
     
 }
-const info = (req,res)=>{
-    const data = INFO
-    res.render("info", {data})
-}
-const randomNumbers = (req,res)=>{
-    const cant = req.query.cant || 10000
-    const subProcess = fork("randomNumbers.js")
-    const PORT = parseInt(process.argv[2]) || 8080
-    const PROCESSID = process.pid
-    subProcess.send(cant)
-    subProcess.on("message",(cant)=>{
-        res.render("randoms", { data: cant , PORT, PROCESSID})
-    })
-}
 
 module.exports = {
     login,
     loginPassport,
+    login_error,
     register,
     registerPassport,
+    register_error,
     logOut,
     authenticateHome,
     productPost,
-    profile,
-    profileThumbnail,
     info,
-    randomNumbers
+    profile,
+    profileThumbnail
 }

@@ -30,6 +30,7 @@ passport.use("local-register", new LocalStrategy({
         newUser.creationDate = new Date().toLocaleString();
         newUser.password = newUser.encryptPassword(password);
         await newUser.save()
+        req.session.user = email
         done(null, newUser)
     }
 ))

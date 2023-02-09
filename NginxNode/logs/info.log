@@ -1,0 +1,76 @@
+{"timestamp":"07/02/2023 10:51:45","level":"info","message":"Proceso #16336 escuchando en el puerto 8080","data":null}
+{"timestamp":"07/02/2023 10:51:47","level":"info","message":"Proceso #15092 escuchando en el puerto 8080","data":null}
+{"timestamp":"07/02/2023 11:24:00","level":"info","message":"Proceso #12880 escuchando en el puerto 8080","data":null}
+{"timestamp":"07/02/2023 11:26:20","level":"info","message":"Proceso #10524 escuchando en el puerto 8080","data":null}
+{"timestamp":"07/02/2023 11:26:39","level":"info","message":"{\"argumentoDeEntrada\":[\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"C:\\\\Users\\\\User\\\\Desktop\\\\Backend compu brian\\\\Backend2\\\\Clase 26\\\\NginxNode\\\\serverMongoDb.js\"],\"sistemaOperativo\":\"win32\",\"versionNodeJs\":\"v16.17.0\",\"memoriaReservada\":69070848,\"pathEjecucion\":\"C:\\\\Windows\\\\system32\\\\cmd.exe \",\"processID\":10524,\"carpertaDelProyecto\":\"C:\\\\Users\\\\User\\\\Desktop\\\\Backend compu brian\\\\Backend2\\\\Clase 26\\\\NginxNode\",\"numeroCPUs\":8}","data":null}
+{"timestamp":"07/02/2023 11:27:03","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"07/02/2023 12:00:45","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:03:59","level":"info","message":"Proceso #10532 escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 21:21:12","level":"info","message":"Proceso #12624 escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 21:21:23","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:29","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:39","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 21:21:41","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:18","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:08:19","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:50","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:08:52","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:08:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:10:40","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:11:01","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:11:44","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:13:00","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:13:03","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:13:09","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:13:57","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:14:14","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:14:16","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:22","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:25","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:27","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:14:28","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:58","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:59","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:15:59","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:41","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:16:42","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:42","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:52","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:16:58","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:17:56","level":"warn","message":"Ruta GET /asd no implementada","data":null}
+{"timestamp":"08/02/2023 22:17:57","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:19:48","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:19:51","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:32","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:20:33","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:33","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:20:39","level":"warn","message":"Ruta GET /favicon.ico no implementada","data":null}
+{"timestamp":"08/02/2023 22:56:55","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:57:58","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:58:04","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:58:17","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:59:29","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:59:36","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 22:59:38","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 22:59:39","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:00:27","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:00:35","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:00:41","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:00:51","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:01:22","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:02:12","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:02:30","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:03:04","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:04:05","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:08:29","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:11:29","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:13:35","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:15:00","level":"warn","message":"Ruta GET /register-error no implementada","data":null}
+{"timestamp":"08/02/2023 23:16:02","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:16:28","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:17:07","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:17:19","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"08/02/2023 23:17:27","level":"warn","message":"Ruta GET /uploads/63e446b3141d654ce5a70e1d.png no implementada","data":null}

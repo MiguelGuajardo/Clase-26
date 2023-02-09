@@ -1,0 +1,3 @@
+{"timestamp":"07/02/2023 12:00:45","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}
+{"timestamp":"07/02/2023 12:01:01","level":"error","message":"Error en servidor Error: listen EACCES: permission denied -p","data":null}

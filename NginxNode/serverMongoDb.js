@@ -7,6 +7,10 @@ const passport = require("passport")
 const auth  = require("./src/routes/authRouter")
 const MongoStore = require("connect-mongo")
 const { fork } = require("child_process")
+const compression = require("compression")
+const Logger = require("./src/utils/logger")
+const logger = new Logger()
+
 
 const app = express()
 
@@ -55,6 +59,16 @@ app.use(express.static('./public'))
 /* Routes */
 app.use("/", auth)
 
+app.get("/info", (req,res)=>{
+    const data = INFO
+    logger.info(JSON.stringify(data))
+    res.render("info", {data})
+})
+app.get("/infozip",compression(), (req,res)=>{
+    const data = INFO
+    res.render("info", {data})
+})
+
 app.get("/randoms",(req,res)=>{
     const cant = req.query.cant || 10000
     const subProcess = fork("randomNumbers.js")
@@ -64,40 +78,41 @@ app.get("/randoms",(req,res)=>{
     console.log(`port: ${PORT} -> Fyh: ${Date.now()}`)
     subProcess.on("message",(cant)=>{
         res.render("randoms", { data: cant , PORT, PROCESSID})
+    })
 })
+app.all("*",(req,res)=>{
+    const {method, url} = req
+    logger.warn(`Ruta ${method} ${url} no implementada`)
+    res.render("404")
 })
 
 /* Server Listen */
 
-
 const server = app.listen(config.SERVER.PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${config.SERVER.PORT}`);
+    logger.info(`Escuchando en el puerto ${config.SERVER.PORT}`)
 });
-server.on("error", (error) => console.log(`Error en servidor ${error}`));
+server.on("error", (error) => logger.error(`Error en servidor ${error}`));
 
-/* Clusters*/
-const parseArgs = require("minimist")
+/* const os = require('os')
 const cluster = require("cluster")
-const INFO = require("./src/utils/info")
-const args = parseArgs(process.argv.slice(2))
-const CLUSTER = args.CLUSTER
 
-if (CLUSTER) {
-    if (cluster.isPrimary) {
-        
-        console.log(`CLUSTER corriendo en nodo primario ${process.pid} - Puerto ${config.SERVER.PORT}`);
-
-        for (let i = 0; i < 4; i++) {
-            cluster.fork()
-        }
-        cluster.on(`exit`, worker => {
-            console.log(`Worker ${worker.process.pid} finalizado.`);
-            cluster.fork();
-        });
-    } else {
-        console.log(`Nodo Worker corriendo en el proceso ${process.pid}`);
+if (config.SERVER.MODE === 'CLUSTER' && cluster.isPrimary) {        
+    const numCPUs = os.cpus().length
+    logger.info(`CLUSTER corriendo en nodo primario ${process.pid} - Puerto ${config.SERVER.PORT}`)
+    logger.info(`Número de procesadores: ${numCPUs}`)
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork()
     }
-} else {
-    console.log(`No es un cluster`);
-}
 
+    cluster.on('exit', worker => {
+        logger.info(`Worker ${worker.process.pid} finalizado`)
+        cluster.fork()
+    });
+        
+} else {
+    const server = app.listen(config.SERVER.PORT, () => {
+        logger.info(`Proceso #${process.pid} escuchando en el puerto ${config.SERVER.PORT}`)
+    });
+    server.on("error", (error) => logger.error(`Error en servidor ${error}`));
+}
+ */
