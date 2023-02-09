@@ -75,7 +75,7 @@ app.get("/randoms",(req,res)=>{
     const PORT = parseInt(process.argv[2]) || 8080
     const PROCESSID = process.pid
     subProcess.send(cant)
-    console.log(`port: ${PORT} -> Fyh: ${Date.now()}`)
+    logger.info(`port: ${PORT} -> Fyh: ${Date.now()}`)
     subProcess.on("message",(cant)=>{
         res.render("randoms", { data: cant , PORT, PROCESSID})
     })

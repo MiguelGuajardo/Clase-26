@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "mongo": "nodemon NginxNode/serverMongoDb.js",
+        "start": "node NginxNode/serverMongoDb.js"
+    }
+}

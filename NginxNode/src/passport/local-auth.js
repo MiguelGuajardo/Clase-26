@@ -1,5 +1,7 @@
 const passport = require("passport")
 const LocalStrategy = require("passport-local").Strategy
+const Logger = require("../utils/logger")
+const logger = new Logger()
 
 const User = require("../models/User")
 
@@ -41,10 +43,10 @@ passport.use("local-login", new LocalStrategy({
 }, async(req,email,password,done)=>{
     const user = await User.findOne({email:email})
     if(!user){
-        return done(null,false,console.log({Message:"No User Found"}) )
+        return done(null,false,logger.error(JSON.stringify({Message:"No User Found"})) )
     }
     if(!user.comparePassword(password)){
-        return done(null,false,console.log({Message:"Incorrect password"}))
+        return done(null,false,logger.error(JSON.stringify({Message:"Incorrect password"})))
     }
     done(null, user)
 }))

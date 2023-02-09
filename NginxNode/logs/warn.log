@@ -39,3 +39,5 @@
 {"timestamp":"08/02/2023 23:00:41","level":"warn","message":"Ruta GET /login-error no implementada","data":null}
 {"timestamp":"08/02/2023 23:15:00","level":"warn","message":"Ruta GET /register-error no implementada","data":null}
 {"timestamp":"08/02/2023 23:17:27","level":"warn","message":"Ruta GET /uploads/63e446b3141d654ce5a70e1d.png no implementada","data":null}
+{"timestamp":"09/02/2023 10:07:21","level":"error","message":{"Message":"Incorrect password"},"data":null}
+{"timestamp":"09/02/2023 10:07:59","level":"error","message":{"Message":"Incorrect password"},"data":null}
